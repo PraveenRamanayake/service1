@@ -65,7 +65,7 @@ app.post("/file/upload", uploadStrategy, (req, res) =>{
   try {
 
     axios
-        .post("https://praveenfunction.azurewebsites.net",{
+        .post("https://praveenfunction.azurewebsites.net/api/HttpTrigger1",{
           filedata : req.file.buffer,
           filename : req.file.originalname,
         })
